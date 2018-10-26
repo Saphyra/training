@@ -12,7 +12,7 @@ public class ThymeLeafConfig {
     public ClassLoaderTemplateResolver thymeLeafTemplateResolverConfig(){
         ClassLoaderTemplateResolver templateResolver = new ClassLoaderTemplateResolver();
         templateResolver.setPrefix("public/html/");
-        templateResolver.setSuffix(".html.json");
+        templateResolver.setSuffix(".html");
         templateResolver.setTemplateMode(TemplateMode.HTML);
         templateResolver.setCharacterEncoding("UTF-8");
         templateResolver.setOrder(0);

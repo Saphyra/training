@@ -2,6 +2,7 @@ package training.controller;
 
 import java.io.IOException;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.stereotype.Controller;
@@ -21,14 +22,16 @@ public class PageController {
         return "index";
     }
 
-    @GetMapping(path = PAGE_MAPPING, produces = "text/html.json")
+    @GetMapping(path = PAGE_MAPPING, produces = "text/html")
     public String page(
         @PathVariable("bookName") String bookName,
         @PathVariable("pageNumber") String pageNumber,
+        HttpServletRequest request,
         HttpServletResponse response
     ) throws IOException {
+        log.info(request.getRequestURI());
         String path = "books/" + bookName + "/" + pageNumber;
-        String fileName = "/public/html/" + path + ".html.json";
+        String fileName = "/public/html/" + path + ".html";
         if(PageController.class.getResource(fileName) == null){
             response.sendRedirect(HOME_MAPPING);
             return null;
