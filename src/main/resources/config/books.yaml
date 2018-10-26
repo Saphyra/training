@@ -1,0 +1,7 @@
+books:
+  - url: "/book/html/1"
+    title: "HTML"
+    description: ""
+  - url: "/book/js/1"
+    title: "JavaScript"
+    description: ""
