@@ -1,7 +1,6 @@
 package training.controller;
 
-import java.util.List;
-import java.util.stream.Collectors;
+import java.util.Map;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -20,9 +19,9 @@ public class DataController {
     private final BookDescriptionService bookDescriptionService;
 
     @GetMapping(BOOK_LIST_MAPPING)
-    public List<BookDescription> getBooks(){
-        List<BookDescription> result = bookDescriptionService.values().stream().collect(Collectors.toList());
-        log.info("{}", result);
+    public Map<String, BookDescription> getBooks(){
+        Map<String, BookDescription> result = bookDescriptionService;
+        log.debug("{}", result);
         return result;
     }
 }
