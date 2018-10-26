@@ -21,14 +21,14 @@ public class PageController {
         return "index";
     }
 
-    @GetMapping(path = PAGE_MAPPING, produces = "text/html")
+    @GetMapping(path = PAGE_MAPPING, produces = "text/html.json")
     public String page(
         @PathVariable("bookName") String bookName,
         @PathVariable("pageNumber") String pageNumber,
         HttpServletResponse response
     ) throws IOException {
         String path = "books/" + bookName + "/" + pageNumber;
-        String fileName = "/public/html/" + path + ".html";
+        String fileName = "/public/html/" + path + ".html.json";
         if(PageController.class.getResource(fileName) == null){
             response.sendRedirect(HOME_MAPPING);
             return null;

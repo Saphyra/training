@@ -1,7 +1,7 @@
 package training.controller;
 
-import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -21,7 +21,7 @@ public class DataController {
 
     @GetMapping(BOOK_LIST_MAPPING)
     public List<BookDescription> getBooks(){
-        List<BookDescription> result = new ArrayList<>();
+        List<BookDescription> result = bookDescriptionService.values().stream().collect(Collectors.toList());
         log.info("{}", result);
         return result;
     }

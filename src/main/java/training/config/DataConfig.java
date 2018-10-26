@@ -10,7 +10,7 @@ public class DataConfig {
 
     @Bean
     public BookDescriptionService bookDescriptionService(){
-        BookDescriptionService service = new BookDescriptionService("books.yaml");
+        BookDescriptionService service = new BookDescriptionService("books");
         service.init();
         return service;
     }
