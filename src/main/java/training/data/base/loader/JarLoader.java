@@ -62,7 +62,7 @@ public class JarLoader<T extends Identifiable> extends AbstractLoader<T> {
                 log.info("Matched element: {}", entryName);
                 String contentString = readJarEntry(jarFile, entry);
                 T content = objectMapper.readValue(contentString, clazz);
-                putElement(content, dataService);
+                putElement(content, dataService, jarPath);
             }
         } catch (IOException e) {
             e.printStackTrace();

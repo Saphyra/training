@@ -10,6 +10,7 @@ import training.data.base.Identifiable;
 @SuppressWarnings({"WeakerAccess", "ConstantConditions", "unchecked"})
 @Slf4j
 public class FileLoader<T extends Identifiable> extends AbstractLoader<T> {
+    private static final JsonFileFilter jsonFilter = new JsonFileFilter();
 
     private final Class<T> clazz;
     private final File root;
@@ -25,12 +26,12 @@ public class FileLoader<T extends Identifiable> extends AbstractLoader<T> {
     public void load() {
         log.info("Loading elements from file.");
         if (root.isDirectory()) {
-            File[] files = root.listFiles();
+            File[] files = root.listFiles(jsonFilter);
             for (File file : files) {
                 loadFile(file);
             }
         }else {
-            loadFile(root);
+            //TODO load single file
         }
     }
 
@@ -44,6 +45,6 @@ public class FileLoader<T extends Identifiable> extends AbstractLoader<T> {
 
     private void parseFile(File file) throws IOException {
         T content = objectMapper.readValue(file, clazz);
-        putElement(content, dataService);
+        putElement(content, dataService, dataService.getPath());
     }
 }

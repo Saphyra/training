@@ -11,7 +11,7 @@ import training.data.base.Identifiable;
 public abstract class AbstractLoader<T extends Identifiable> implements ContentLoader {
     protected static final ObjectMapper objectMapper = new ObjectMapper();
 
-    protected void putElement(T content, AbstractDataService<T> dataService) {
+    protected void putElement(T content, AbstractDataService<T> dataService, String path) {
         log.info("Loaded element. Key: {}, Value: {}", content.getId(), content);
         dataService.put(content.getId(), content);
     }
