@@ -14,15 +14,14 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class PageController {
     private static final String HOME_MAPPING = "/";
-    private static final String PAGE_MAPPING = "{bookName}/{pageNumber}";
-    private static final String ERROR_MAPPING = "/error";
+    private static final String PAGE_MAPPING = "book/{bookName}/{pageNumber}";
 
-    @GetMapping({HOME_MAPPING, ERROR_MAPPING})
+    @GetMapping(HOME_MAPPING)
     public String index() {
         return "index";
     }
 
-    @GetMapping(PAGE_MAPPING)
+    @GetMapping(path = PAGE_MAPPING, produces = "text/html")
     public String page(
         @PathVariable("bookName") String bookName,
         @PathVariable("pageNumber") String pageNumber,
@@ -31,7 +30,8 @@ public class PageController {
         String path = "books/" + bookName + "/" + pageNumber;
         String fileName = "/public/html/" + path + ".html";
         if(PageController.class.getResource(fileName) == null){
-            return index();
+            response.sendRedirect(HOME_MAPPING);
+            return null;
         }
         return path;
     }
