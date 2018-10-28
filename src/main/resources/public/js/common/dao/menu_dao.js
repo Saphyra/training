@@ -8,7 +8,13 @@
         const request = new Request(dao.GET, path);
             request.processValidResponse = successCallBack;
             request.convertResponse = function(response){
-                return JSON.parse(response.response);
+                const menuElements = JSON.parse(response.response);
+                
+                    menuElements.sort(function(a, b){
+                        return a.id.localeCompare(b.id);
+                    });
+                
+                return menuElements;
             }
         dao.sendRequestAsync(request);
     }

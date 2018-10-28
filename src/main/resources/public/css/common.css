@@ -105,7 +105,7 @@ footer button{
     padding: 0.25rem;
 }
 
-#content_container article p, #content_container article pre{
+#content_container article p, #content_container article pre, #content_container article li{
     margin-top: 0.75rem;
     margin-bottom: 0.75rem;
 }
@@ -116,12 +116,33 @@ pre{
     background: rgb(210,210,210);
 }
 
+#content_container article img{
+    display: block;
+    margin: auto;
+    width: 75%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+#content_container a{
+    border: none;
+}
+
 .codepart{
     background: rgb(255, 200, 200);
     font-family: monospace;
 }
 
 /*================INPUT/NAVIGATION ELEMENTS==================*/
+.link{
+    cursor: pointer;
+    color: blue;
+    text-decoration: underline;
+}
+.link:hover{
+    color: purple;
+}
+
 a{
     text-decoration: none;
     color: black;

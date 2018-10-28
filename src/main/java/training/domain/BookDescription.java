@@ -1,7 +1,6 @@
 package training.domain;
 
 import lombok.Data;
-import training.data.base.Identifiable;
 
 @Data
 public class BookDescription extends AbstractMenuElement {
@@ -11,7 +10,7 @@ public class BookDescription extends AbstractMenuElement {
 
     @Override
     public String getNumber() {
-        return "1";
+        return "001";
     }
 
     @Override

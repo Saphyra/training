@@ -1,16 +1,15 @@
 package training.controller;
 
-import java.util.Map;
-
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
-
-import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
-import training.domain.BookDescription;
 import training.domain.MenuElement;
 import training.service.MenuFacade;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
@@ -21,9 +20,9 @@ public class DataController {
     private final MenuFacade menuFacade;
 
     @GetMapping(GET_MENU_MAPPING)
-    public Map<String, ? extends MenuElement> getBooks(
+    public List<? extends MenuElement> getBooks(
         @PathVariable("menuId") String menuId
     ){
-        return menuFacade.getMenu(menuId);
+        return new ArrayList<>(menuFacade.getMenu(menuId).values());
     }
 }
