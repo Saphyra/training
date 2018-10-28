@@ -1,4 +1,4 @@
-package training.service.data;
+package training.data;
 
 import training.data.base.AbstractDataService;
 import training.domain.BookDescription;

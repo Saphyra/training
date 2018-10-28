@@ -1,6 +1,6 @@
 (function MenuController(){
     window.menuController = new function(){
-        scriptLoader.loadScript("js/common/dao/menu_dao.js");
+        scriptLoader.loadScript("/js/common/dao/menu_dao.js");
         
         $(document).ready(function(){
             loadMenu();
@@ -24,8 +24,6 @@
         function displayMenu(response){
             const container = document.getElementById("menu_container");
                 container.innerHTML = "";
-            
-                logService.log(response);
             
                 for(let bid in response){
                     addMenuElement(container, response[bid]);

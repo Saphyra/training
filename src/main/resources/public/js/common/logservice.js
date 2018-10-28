@@ -142,7 +142,7 @@
                         color = "green";
                     break;
                     case "warn":
-                        color = "yellow";
+                        color = "orange";
                     break;
                     case "error":
                         color = "red";
