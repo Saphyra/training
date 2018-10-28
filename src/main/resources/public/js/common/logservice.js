@@ -68,6 +68,7 @@
                     const mainContainer = document.createElement("DIV");
                         mainContainer.classList.add("cover");
                         mainContainer.id = "logcontainermain";
+                        mainContainer.style.display = "block";
                         
                         const title = document.createElement("H1");
                             title.innerHTML = "Log";
@@ -135,7 +136,7 @@
                 let color;
                 switch(level){
                     case "info":
-                        color = "white";
+                        color = "black";
                     break;
                     case "debug":
                         color = "green";

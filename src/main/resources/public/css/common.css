@@ -71,6 +71,24 @@ footer button{
     font-size: 1.25rem;
 }
 
+#menu_container, #content_container{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    overflow: auto;
+}
+
+#menu_container{
+    left: 0;
+    width: 20rem;
+    border-right: 3px ridge black;
+}
+
+#content_container{
+    right: 0;
+    left: 20rem;
+}
+
 /*================INPUT/NAVIGATION ELEMENTS==================*/
 a{
     text-decoration: none;
