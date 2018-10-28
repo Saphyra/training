@@ -3,8 +3,8 @@ package training.service.data;
 import training.data.base.AbstractDataService;
 import training.domain.BookDescription;
 
-public class BookDescriptionService extends AbstractDataService<BookDescription> {
-    public BookDescriptionService(String source) {
+public class IndexMenu extends AbstractDataService<BookDescription> {
+    public IndexMenu(String source) {
         super(source);
     }
 

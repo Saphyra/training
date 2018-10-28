@@ -3,25 +3,27 @@ package training.controller;
 import java.util.Map;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import training.domain.BookDescription;
-import training.service.data.BookDescriptionService;
+import training.domain.MenuElement;
+import training.service.MenuFacade;
 
 @RestController
 @RequiredArgsConstructor
 @Slf4j
 public class DataController {
-    private static final String BOOK_LIST_MAPPING = "books";
+    private static final String GET_MENU_MAPPING = "menu/{menuId}";
 
-    private final BookDescriptionService bookDescriptionService;
+    private final MenuFacade menuFacade;
 
-    @GetMapping(BOOK_LIST_MAPPING)
-    public Map<String, BookDescription> getBooks(){
-        Map<String, BookDescription> result = bookDescriptionService;
-        log.debug("{}", result);
-        return result;
+    @GetMapping(GET_MENU_MAPPING)
+    public Map<String, ? extends MenuElement> getBooks(
+        @PathVariable("menuId") String menuId
+    ){
+        return menuFacade.getMenu(menuId);
     }
 }
