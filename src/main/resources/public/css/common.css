@@ -89,6 +89,38 @@ footer button{
     left: 20rem;
 }
 
+#content_container article{
+    border: 3px outset black;
+    border-radius: 10px;
+    margin: 0.25rem;
+    background-color: rgb(230,230,230);
+    font-size: 1.35rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+#content_container article h2{
+    text-align: center;
+    border-bottom: 3px ridge black;
+    padding: 0.25rem;
+}
+
+#content_container article p, #content_container article pre{
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+pre{
+    padding: 0.25rem;
+    font-family: monospace;
+    background: rgb(210,210,210);
+}
+
+.codepart{
+    background: rgb(255, 200, 200);
+    font-family: monospace;
+}
+
 /*================INPUT/NAVIGATION ELEMENTS==================*/
 a{
     text-decoration: none;

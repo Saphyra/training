@@ -176,6 +176,10 @@
     left: -0.25rem;
 }
 
+.linethrough{
+    text-decoration: line-through;
+}
+
 .margin0{
     margin: 0;
 }
