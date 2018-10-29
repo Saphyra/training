@@ -1,0 +1,73 @@
+<HTML>
+    <HEAD>
+        <TITLE>HTML tagek - Szöveg formázás - Oktatás</TITLE>
+        <META charset="UTF-8">
+
+        <LINK rel="stylesheet" href="/css/reset.css">
+        <LINK rel="stylesheet" href="/css/common.css">
+        <LINK rel="stylesheet" href="/css/classes.css">
+
+        <SCRIPT>window.pageId = "html";</SCRIPT>
+        
+        <SCRIPT src="/js/common/jquery.js"></SCRIPT>
+        <SCRIPT src="/js/common/common_base.js"></SCRIPT>
+    </HEAD>
+    <BODY>
+        <DIV class="cover">
+            <HEADER>
+                <H1>HTML Tagek - Szöveg formázás</H1>
+            </HEADER>
+
+            <MAIN>
+                <SECTION id='menu_container'></SECTION>
+                
+                <SECTION id='content_container'>
+                    <ARTICLE>
+                        <H2>Címsorok</H2>
+                        
+                        <P>A HTML 6 különböző méretű címsort különböztet meg, <SPAN class='codepart'>&lt;h1></SPAN>-től a <SPAN class='codepart'>&lt;h6></SPAN>-ig.</P>
+                        <P>A <SPAN class='codepart'>&lt;h1></SPAN> a legnagyobb, míg a <SPAN class='codepart'>&lt;h6></SPAN> a legkisebb méretű címsor.</P>
+                        <P><BUTTON onclick='window.open("/book/html/sample_002")'>Példák</BUTTON></P>
+                    </ARTICLE>
+                    
+                    <ARTICLE>
+                        <H2>Bekezdés</H2>
+                        
+                        <P>Bekezdést a <SPAN class='codepart'>&lt;p></SPAN> taggel lehet létrehozni.</P>
+                        <P>Minden bekezdés új sorba kerül.</P>
+                        <P><BUTTON onclick='window.open("/book/html/sample_003")'>Példák</BUTTON></P>
+                    </ARTICLE>
+                    
+                    <ARTICLE>
+                        <H2>Sortörés</H2>
+                        
+                        <P>A HTML a megjelenítés közben figyelmen kívül hagyja a sortöréseket (szóközzel helyettesíti), így ha mégis azt szeretnénk, hogy a szöveg új sorban folytatódjon, akkor az erre a célra fenntartott <SPAN class='codepart'>&lt;br></SPAN> taget kell használnunk.</P>
+                        <P>A <SPAN class='codepart'>&lt;br></SPAN> tagnek nincs záró párja.</P>
+                    </ARTICLE>
+                    
+                    <ARTICLE>
+                        <H2>Vízszintes vonal</H2>
+                        
+                        <P>Egy vízszintes vonal felhasználható például az oldal tartalmi egységeinek elválasztására.</P>
+                        <P>A vonalat a <SPAN class='codepart'>&lt;hr></SPAN> taggel lehet létrehozni.</P>
+                        <P>A tagnek nincs záró párja.</P>
+                        <P>A vonal vastagségát a <SPAN class='codepart'>size="5px"</SPAN> attribútummal lehet beállítani.</P>
+                        <P>
+                            Példák:
+                            <Ul>
+                                <LI>Egyszerű vonal:<HR></LI>
+                                <LI>Egy kicsit vastagabb vonnal:<HR size=10px></LI>
+                            </UL>
+                        </P>
+                    </ARTICLE>
+                </SECTION>
+            </MAIN>
+
+            <FOOTER>
+                <BUTTON onclick="window.location.href = '/book/html/002'">Előző</BUTTON>
+                <BUTTON onclick="window.location.href = '/'">Kezdőlap</BUTTON>
+                <BUTTON onclick="window.location.href = '/book/html/004'">Következő</BUTTON>
+            </FOOTER>
+        </DIV>
+    </BODY>
+</HTML>

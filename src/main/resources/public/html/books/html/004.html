@@ -1,0 +1,69 @@
+<HTML>
+    <HEAD>
+        <TITLE>HTML tagek - Tartalom hozzáadása - Oktatás</TITLE>
+        <META charset="UTF-8">
+
+        <LINK rel="stylesheet" href="/css/reset.css">
+        <LINK rel="stylesheet" href="/css/common.css">
+        <LINK rel="stylesheet" href="/css/classes.css">
+
+        <SCRIPT>window.pageId = "html";</SCRIPT>
+        
+        <SCRIPT src="/js/common/jquery.js"></SCRIPT>
+        <SCRIPT src="/js/common/common_base.js"></SCRIPT>
+    </HEAD>
+    <BODY>
+        <DIV class="cover">
+            <HEADER>
+                <H1>HTML Tagek - Tartalom hozzáadása</H1>
+            </HEADER>
+
+            <MAIN>
+                <SECTION id='menu_container'></SECTION>
+                
+                <SECTION id='content_container'>
+                    <ARTICLE>
+                        <H2>Linkek</H2>
+                        
+                        <P>
+                            Linket az <SPAN class='codepart'>&lt;a></SPAN> taggel lehet létrehozni a következő módon:<BR>
+                            <SPAN class='codepart'>&lt;a href="url">Link szövege&lt;/a></SPAN>
+                        </P>
+                        <P>Ha azt szeretnénk, hogy a link egy új böngésző fülön nyíljon meg, használjuk a <SPAN class='codepart'>target="_blank"</SPAN> attribútumot.</P>
+                        <P><BUTTON onclick='window.open("/book/html/sample_004")'>Példák</BUTTON></P>
+                    </ARTICLE>
+                    
+                    <ARTICLE>
+                        <H2>Kép beszúrása</H2>
+                        
+                        <P>Képet az <SPAN class='codepart'>&lt;img></SPAN> taggel lehet beszúrni.</P>
+                        <P><SPAN class='codepart'>&lt;img src="a_kep_url-je"></SPAN></P>
+                        <P>Az <SPAN class='codepart'>&lt;img></SPAN> tagnek nincs záró párja.</P>
+                        <P>
+                            Attribútumok:
+                            <UL>
+                                <LI>
+                                    Méretezés:
+                                    <UL>
+                                        <LI>A kép szélességét a <SPAN class='codepart'>width="100px"</SPAN>,</LI>
+                                        <LI>A magasságát pedig a <SPAN class='codepart'>height="100px"</SPAN> attribútimmal lehet beállítani.</LI>
+                                        <LI>Ha nem adunk meg méretet, akkor a kép az eredeti méretében fog megjelenni.</LI>
+                                        <LI>Ha csak az egyik méretet adjuk meg, akkor a másik méret az arány megtartásával auutomatikusan módosul.</LI>
+                                    </UL>
+                                </LI>
+                                <LI>Az <SPAN class='codepart'>alt="Alternatív szöveg"</SPAN> attribútum a kép helyett jelenik meg, amennyiben a böngésző valamilyen okból nem tudja betölteni a képet.</LI>
+                            </UL>
+                        </P>
+                        <P><BUTTON onclick='window.open("/book/html/sample_005")'>Példák</BUTTON></P>
+                    </ARTICLE>
+                </SECTION>
+            </MAIN>
+
+            <FOOTER>
+                <BUTTON onclick="window.location.href = '/book/html/003'">Előző</BUTTON>
+                <BUTTON onclick="window.location.href = '/'">Kezdőlap</BUTTON>
+                <BUTTON onclick="window.location.href = '/book/html/005'">Következő</BUTTON>
+            </FOOTER>
+        </DIV>
+    </BODY>
+</HTML>
