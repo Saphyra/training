@@ -1,0 +1,23 @@
+<HTML>
+    <HEAD>
+        <TITLE>Űrlapok - példa</TITLE>
+    </HEAD>
+    <BODY>
+        <FORM action="/sample/html/form" method="POST" target="_blank">
+            <LABEL>Felhasználónév: <INPUT type="text" name="username" placeholder="Felhasználónév" maxlength="3" required></LABEL><BR>
+            <LABEL>Jelszó: <INPUT type="password" name="password" placeholder="Jelszó" required></LABEL><BR>
+            <LABEL>E-mail cím: <INPUT type="email" name="email" placeholder="E-mail cím"></LABEL><BR>
+            <LABEL>Életkor: <INPUT type="number" name="age" min="1" max="100" value="18"></LABEL><BR>
+            
+            <LABEL>Profilkép: <INPUT type="file" name="profile_picture"></LABEL><BR>
+            
+            <LABEL>Nem: <INPUT type="radio" name="gender" value="male" checked> Férfi</LABEL> / <LABEL><INPUT type="radio" name="gender" value="woman"> Nő</LABEL><BR>
+            <LABEL>Születési idő: <INPUT type="datetime-local" name="birth"></LABEL><BR>
+            
+            <LABEL>Az adatvédedlmi nyilatkozatot elfogadom: <INPUT type="checkbox" name="policy_accepted"></LABEL><BR>
+            
+            <INPUT type="reset">
+            <INPUT type="submit">
+        </FORM>
+    </BODY>
+</HTML>
