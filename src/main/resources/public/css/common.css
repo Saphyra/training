@@ -110,6 +110,10 @@ footer button{
     margin-bottom: 0.75rem;
 }
 
+#content_container article p{
+    line-height: 1.6;
+}
+
 pre{
     padding: 0.25rem;
     font-family: monospace;
@@ -126,6 +130,7 @@ pre{
 
 #content_container a{
     border: none;
+    color: blue;
 }
 
 .codepart{

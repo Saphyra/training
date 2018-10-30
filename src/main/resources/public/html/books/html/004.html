@@ -56,6 +56,50 @@
                         </P>
                         <P><BUTTON onclick='window.open("/book/html/sample_005")'>Példák</BUTTON></P>
                     </ARTICLE>
+                    
+                    <ARTICLE>
+                        <H2>Táblázatok</H2>
+                        
+                        <P>
+                            Táblázat létrehozásához használt tagek:
+                            <UL>
+                                <LI><SPAN class='codepart'>&lt;table></SPAN> - táblázat létrehozása</LI>
+                                <LI><SPAN class='codepart'>&lt;tr></SPAN> - új sor beszúrása</LI>
+                                <LI><SPAN class='codepart'>&lt;th></SPAN> - fejléc cella</LI>
+                                <LI><SPAN class='codepart'>&lt;td></SPAN> - új cella</LI>
+                            </UL>
+                        </P>
+                        <P>
+                            Attribútumok:
+                            <UL>
+                                <LI><SPAN class='codepart'>&lt;table border="3"></SPAN> - szegély hozzáadása a táblázathoz</LI>
+                                <LI><SPAN class='codepart'>&lt;td colspan="2"></SPAN> - cellák összevonása</LI>
+                                <LI><SPAN class='codepart'>&lt;td rowspan="2"></SPAN> - sorok összevonása</LI>
+                            </UL>
+                        </P>
+                        <P><BUTTON onclick='window.open("/book/html/sample_007")'>Példák</BUTTON></P>
+                    </ARTICLE>
+                    
+                    <ARTICLE>
+                        <H2>Weboldal a weboldalban - iframe</H2>
+                        
+                        <P>A HTML lehetőséget kínál más oldalak megnyitására az aktuális oldalon belül. Ezt az <SPAN class='codepart'>&lt;iframe></SPAN> taggel lehet megtenni.</P>
+                        <P>
+                            Példa:<BR>
+                            <SPAN class='codepart'>&lt;iframe src="/book/html/001" width="100%" height="400px"></SPAN>
+                            
+                            <iframe src="/book/html/001" width="100%" height="400px"></iframe>
+                        </P>
+                        
+                        <P>
+                            Link megnyitása az iframe-ben: a <SPAN class='codepart'>name="frame_name"</SPAN> és <SPAN class='codepart'>target="frame_name"</SPAN> attribútumokkal</BR>
+                            <SPAN class='codepart'>&lt;iframe name="target_iframe" src="/book/html/001" width="100%" height="400px"></SPAN><BR>
+                            <SPAN class='codepart'>&lt;a href="/book/html/002" target="target_iframe"></SPAN>
+                            
+                            <iframe src="/book/html/001" name="target_iframe" width="100%" height="400px"></iframe>
+                            <A href="/book/html/002" target="target_iframe">Nyomj erre a kipróbáláshoz!</A>
+                        </P>
+                    </ARTICLE>
                 </SECTION>
             </MAIN>
 

@@ -60,6 +60,43 @@
                             </UL>
                         </P>
                     </ARTICLE>
+                    
+                    <ARTICLE>
+                        <H2>Listák</H2>
+                        
+                        <P>Számozott listát az <SPAN class='codepart'>&lt;ol></SPAN>, míg 'pöttyös' listát az <SPAN class='codepart'>&lt;ul></SPAN> taggel lehet létrehozni.</P>
+                        <P>A listához új elemet a <SPAN class='codepart'>&lt;li></SPAN> taggel lehet adni.</P>
+                        <P>A listákat egymásba is lehet ágyazni.</P>
+                        <P><BUTTON onclick='window.open("/book/html/sample_006")'>Példák</BUTTON></P>
+                    </ARTICLE>
+                    
+                    <ARTICLE>
+                        <H2>Előre formázott szöveg megjelenítése</H2>
+                        
+                        <P>
+                            A böngésző figyelmen kívül hagyja a forráskódban használt sortöréseket, és többszörös szóközöket.<BR>
+                            De mi van akkor, ha például egy több száz soros verset szeretnénk megjeleníteni a weboldalunkon? Minden egyes sor végére rakjunk egy <SPAN class='codepart'>&lt;br></SPAN> taget?<BR>
+                            Ember legyen a talpán, akinek van hozzá türelme.
+                        </P>
+                        <P>A fenti problémára nyújt megoldást a <SPAN class='codepart'>&lt;pre></SPAN> tag. Az ebbe a tagbe foglalt kódot a böngésző egyszerű szövegként kezeli (habár a HTML tageket továbbra is feldolgozza), meghagyja a sortöréseket és az extra szóközöket is.</P>
+                    </ARTICLE>
+                    
+                    <ARTICLE>
+                        <H2>Sorközi formázások</H2>
+                        
+                        <P>Az eddig bemutatott tagek a sorok elhelyezkedését módosították, most vessünk egy pillantást a kisebb szövegrészletek formázására:</P>
+                        <P>
+                            <UL>
+                                <LI>A <SPAN class='codepart'>&lt;b></SPAN> és <SPAN class='codepart'>&lt;strong></SPAN> tagek <B>félkövérré</B> és <STRONG>fontosnak jelöltté</STRONG> teszik a szöveget. (Habár gyakran egyfromán néznek ki, szemantikailag mást jelentenek. A <SPAN class='codepart'>&lt;b></SPAN> egyszerűen csak félkövérré teszi, míg a <SPAN class='codepart'>&lt;strong></SPAN> különös fontosságúnak jelöli a közbezárt szövegrészletet.)</LI>
+                                <LI>A <SPAN class='codepart'>&lt;i></SPAN> és <SPAN class='codepart'>&lt;em></SPAN> tagek <I>dőltté</I> illetve <EM>kiemeltté</EM> teszik a szöveget. Ugyanúgy, mint fentebb, a kinézet megegyezhet, de szemantikai különbségek is jelen vannak.</LI>
+                                <LI>Szöveget <MARK>kiemelni</MARK> a <SPAN class='codepart'>&lt;mark></SPAN> taggel lehet.</LI>
+                                <LI>A <SPAN class='codepart'>&lt;small></SPAN> taggel <SMALL>kisebbé</SMALL>, a <SPAN class='codepart'>&lt;big></SPAN> taggel pedig <BIG>nagyobbá</BIG> lehet változtatni a közbezárt részt.</LI>
+                                <LI>A <SPAN class='codepart'>&lt;del></SPAN> taggal <DEL>áthúzott</DEL>, az <SPAN class='codepart'>&lt;u></SPAN> illetve <SPAN class='codepart'>&lt;ins></SPAN> tagekkel pedig <INS>aláhúzott</INS> szöveget lehet készíteni.</LI>
+                                <LI>A <SPAN class='codepart'>&lt;sub></SPAN> <SUB>alsó</SUB>, a <SPAN class='codepart'>&lt;sup></SPAN> tag pedig <SUP>felső</SUP> indexbe helyezi a kijelölt szövegrészletet.</LI>
+                                <LI>A <SPAN class='codepart'>&lt;q></SPAN> tag <Q>idézőjelek közé</Q> teszi a szöveget.</LI>
+                            </UL>
+                        </P>
+                    </ARTICLE>
                 </SECTION>
             </MAIN>
 
