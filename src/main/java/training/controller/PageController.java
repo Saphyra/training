@@ -33,9 +33,10 @@ public class PageController {
         HttpServletRequest request,
         HttpServletResponse response
     ) throws IOException {
-        log.info(request.getRequestURI());
+        log.debug("Request uri: {}", request.getRequestURI());
         String path = "books/" + bookName + "/" + pageNumber;
         String fileName = "/public/html/" + path + ".html";
+        log.info("File name: {}", fileName);
         if(PageController.class.getResource(fileName) == null){
             response.sendRedirect(HOME_MAPPING);
             return null;

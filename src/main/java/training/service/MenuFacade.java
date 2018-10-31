@@ -1,6 +1,7 @@
 package training.service;
 
 import org.springframework.stereotype.Service;
+import training.data.CssMenu;
 import training.data.HtmlMenu;
 import training.domain.MenuElement;
 import training.data.IndexMenu;
@@ -14,10 +15,12 @@ public class MenuFacade{
 
     public MenuFacade(
         IndexMenu indexMenu,
-        HtmlMenu htmlMenu
+        HtmlMenu htmlMenu,
+        CssMenu cssMenu
     ) {
         menus.put("index", indexMenu);
         menus.put("html", htmlMenu);
+        menus.put("css", cssMenu);
     }
 
     public Map<String, ? extends MenuElement> getMenu(String key){
