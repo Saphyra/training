@@ -100,6 +100,26 @@
             </ARTICLE>
             
             <ARTICLE>
+                <H2>Versenyhelyzetek</H2>
+                
+                <P>Egy weblap több helyen is tartalmazhat CSS kódot: tag attribútumaként, az oldal fejlécében elhelyezett blokkokban és importált külső fájlokban.</P>
+                <P>
+                    Vegyünk egy egyszerű példát:<BR>
+                    Van egy oldalunk, aminek a háttérszínét szeretnénk módosítani. A <SPAN class='codepart'>&lt;body></SPAN> tag tulajdonságában megadjuk, hogy a háttér színe legyen zöld, a fejlécben azt mondjuk, hogy legyen sárga, míg a beimportált css fájl inkább kékre állítaná.<BR>
+                    Na de akkor mi lesz a végeredmény?
+                </P>
+                <P>
+                    A fentebb említett versenyhelyzetekben a következő szerint lépnek érvénybe a szabályok:
+                    <OL>
+                        <LI>A <SPAN class='codepart'>!important</SPAN> (fontosnak jelölt) szabályok</LI>
+                        <LI>A tag attribútumában megadott szabályok</LI>
+                        <LI>Amelyik később töltődött be (az importálás és fejlécbe helyezett blokkok sorrendje szerint a legutolsó)</LI>
+                        <LI>Böngésző beépített szabályai (User Agent Stylesheet)</LI>
+                    </OL>
+                </P>
+            </ARTICLE>
+            
+            <ARTICLE>
                 <H2>Szintaktika</H2>
                 <PRE class='codepart'>
 kivalaszto {
@@ -115,6 +135,12 @@ body {
     font-size: 20px;
 }</PRE>
                     (A <SPAN class='codepart'>&lt;body></SPAN> háttérszínét pirosra, a betűméretét pedig 20 pixelesre állítja.)
+                </P>
+                
+                <P>
+                    <B>Kommentek:</B> A kommenteket a böngésző figyelmen kívül hagyja a megjelenítés során.<BR>
+                    Komment blokk létrehozása: <SPAN class='codepart'>/*Komment szövege*/</SPAN><BR>
+                    Komment blokk lehet több soros, is, de nem ágyazódhatnak egymásba.
                 </P>
             </ARTICLE>
         </SECTION>

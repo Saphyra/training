@@ -105,7 +105,10 @@ footer button{
     padding: 0.25rem;
 }
 
-#content_container article p, #content_container article pre, #content_container article li{
+#content_container article p,
+#content_container article pre,
+#content_container article li,
+#content_container article div{
     margin-top: 0.75rem;
     margin-bottom: 0.75rem;
 }
