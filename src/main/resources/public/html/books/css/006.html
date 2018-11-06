@@ -1,0 +1,73 @@
+<HTML>
+<HEAD>
+    <TITLE>CSS - Mértékegységek - Oktatás</TITLE>
+    <META charset="UTF-8">
+
+    <LINK rel="stylesheet" href="/css/reset.css">
+    <LINK rel="stylesheet" href="/css/common.css">
+    <LINK rel="stylesheet" href="/css/classes.css">
+
+    <SCRIPT>window.pageId = "css";</SCRIPT>
+
+    <SCRIPT src="/js/common/jquery.js"></SCRIPT>
+    <SCRIPT src="/js/common/common_base.js"></SCRIPT>
+</HEAD>
+<BODY>
+<DIV class="cover">
+    <HEADER>
+        <H1>CSS - Mértékegységek</H1>
+    </HEADER>
+
+    <MAIN>
+        <SECTION id='menu_container'></SECTION>
+
+        <SECTION id='content_container'>
+            <ARTICLE>
+                <H2>Abszolút mértékegységek</H2>
+                
+                <P>Az abszolút mértékegységek hossza a körülményektől függetlenül mindig ugyanannyi. (1 centi mindig 1 centi...)</P>
+                
+                <P>
+                    CSS-ben használható abszolút mértékegységek:
+                    
+                    <UL>
+                        <LI><SPAN class='codepart'>cm</SPAN> - centiméter</LI>
+                        <LI><SPAN class='codepart'>mm</SPAN> - milliméter</LI>
+                        <LI><SPAN class='codepart'>in</SPAN> - inch = 2.54cm</LI>
+                        <LI><SPAN class='codepart'>px</SPAN> - pixel - képpont</LI>
+                        <LI><SPAN class='codepart'>pt</SPAN> - pont = 1/72in</LI>
+                        <LI><SPAN class='codepart'>pc</SPAN> - pica = 12pt</LI>
+                    </UL>
+                </P>
+                
+                <P>Abszolút mértékegységek használata a képernyő méretek széles skálája miatt nem ajánlott. (Például telefonon döntött képernyővel lehet, hogy kifér 1500 pixel, de állítva aligha...)</P>
+            </ARTICLE>
+            
+            <ARTICLE>
+                <H2>Relatív mértékegységek</H2>
+                
+                <P>A relatív mértékegységek hossza valamilyen más tulajdonságtól függ.</P>
+                
+                <P>
+                    CSS-ben használható relatív mértékegységek:
+                    
+                    <UL>
+                        <LI><SPAN class='codepart'>%</SPAN> - százalék a szülő tároló méretéhez viszonyítva</LI>
+                        <LI><SPAN class='codepart'>em</SPAN> - a tároló betűméretéhez viszonyítva (1 em = annyi pixel, ahányasra lett állítva a betűméret)</LI>
+                        <LI><SPAN class='codepart'>rem</SPAN> - a <SPAN class='codepart'>&lt;body></SPAN> betűméretéhez viszonyítva (1 rem = annyi pixel, ahányasra lett állítva a <SPAN class='codepart'>&lt;body></SPAN> betűmérete)</LI>
+                        <LI><SPAN class='codepart'>vw</SPAN> - százalék a képernyő szélességéhez viszonyítva (pl ha a képernyőd 1000 px széles, akkor 1vw = 10px)</LI>
+                        <LI><SPAN class='codepart'>vh</SPAN> - százalék a képernyő magasságához viszonyítva (pl ha a képernyőd 1000 px magas, akkor 1vw = 10px)</LI>
+                    </UL>
+                </P>
+            </ARTICLE>
+        </SECTION>
+    </MAIN>
+
+    <FOOTER>
+        <BUTTON onclick="window.location.href = '/book/css/005'">Előző</BUTTON>
+        <BUTTON onclick="window.location.href = '/'">Kezdőlap</BUTTON>
+        <BUTTON onclick="window.location.href = '/book/css/007'">Következő</BUTTON>
+    </FOOTER>
+</DIV>
+</BODY>
+</HTML>
