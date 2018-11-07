@@ -1,0 +1,61 @@
+<HTML>
+<HEAD>
+    <TITLE>CSS - Margók - Oktatás</TITLE>
+    <META charset="UTF-8">
+
+    <LINK rel="stylesheet" href="/css/reset.css">
+    <LINK rel="stylesheet" href="/css/common.css">
+    <LINK rel="stylesheet" href="/css/classes.css">
+
+    <SCRIPT>window.pageId = "css";</SCRIPT>
+
+    <SCRIPT src="/js/common/jquery.js"></SCRIPT>
+    <SCRIPT src="/js/common/common_base.js"></SCRIPT>
+</HEAD>
+<BODY>
+<DIV class="cover">
+    <HEADER>
+        <H1>CSS - Margók</H1>
+    </HEADER>
+
+    <MAIN>
+        <SECTION id='menu_container'></SECTION>
+
+        <SECTION id='content_container'>
+            <ARTICLE>
+                <H2>Mire jók a margók?</H2>
+                
+                <P>Margók beállításával a tárolóink egymáshoz képesti helyzetét tudjuk meghatározni.</P>
+                
+                <P>
+                    Például vegyünk egy nagy dobozt, amibe bele rakunk egy kisebbet úgy, hogy annak egy meghatározott távolságra kell lennie a nagy doboz sarkától. Ezt a távolságot adja meg a margó:<BR>
+                    
+                    <SPAN class='codepart'>margin: 20px;</SPAN>: Egy 20 px széles területet foglal le a tároló körül.
+                    <PRE>
+&lt;div style='background: red'>
+    Tároló
+    &lt;div style='background: green; margin: 20px'>Doboz margóval&lt;/div>
+    &lt;div style='background: yellow;'>Margó nélküli doboz&lt;/div>
+
+&lt;/div></PRE>
+
+                    <DIV style='background: red; width: 250px; height: 250px;'>
+                        Tároló
+                        <DIV style='background: green; margin: 20px;'>Doboz margóval</DIV>
+                        <DIV style='background: yellow; margin: 20px;'>Margó nélküli doboz</DIV>
+                    </DIV>
+                </P>
+                
+                <P>Ahogy a példában látható, a margóval ellátott doboz körül létrejött egy 20 pixel vastag üres tér.</P>
+            </ARTICLE>
+        </SECTION>
+    </MAIN>
+
+    <FOOTER>
+        <BUTTON onclick="window.location.href = '/book/css/007'">Előző</BUTTON>
+        <BUTTON onclick="window.location.href = '/'">Kezdőlap</BUTTON>
+        <BUTTON onclick="window.location.href = '/book/css/009'">Következő</BUTTON>
+    </FOOTER>
+</DIV>
+</BODY>
+</HTML>
