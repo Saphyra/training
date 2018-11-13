@@ -97,6 +97,7 @@ footer button{
     font-size: 1.35rem;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
+    overflow: auto;
 }
 
 #content_container article h2{

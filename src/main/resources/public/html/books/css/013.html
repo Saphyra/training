@@ -22,7 +22,201 @@
         <SECTION id='menu_container'></SECTION>
 
         <SECTION id='content_container'>
+            <ARTICLE>
+                <H2>Táblázatok szegélye</H2>
 
+                <P>A táblázatok több összetevőből álló, komplex objektumok, így a megjelenésük is sokféle lehet. Vessük is bele magunk a szegélyek megadásába!</P>
+                <P>
+                    Kezdésként hozzunk létre egy egyszerű táblázatot, aminek aztán a stílusát állítani tudjuk:
+                    <PRE>
+&lt;table>
+    &lt;tr>
+        &lt;th>Fejléc 1&lt;/th>
+        &lt;th>Fejléc 2&lt;/th>
+    &lt;/tr>
+    &lt;tr>
+        &lt;td>Adat 1&lt;/td>
+        &lt;td>Adat 2&lt;/td>
+    &lt;tr>
+&lt;/table></PRE>
+
+                    Eredmény:
+                    <DIV style="width: 250px; height: 250px; border: 3px solid red; padding: 0.5rem;">
+                        <TABLE>
+                            <TR>
+                                <TH>Fejléc 1</TH>
+                                <TH>Fejléc 2</TH>
+                            </TR>
+                            <TR>
+                                <TD>Adat 1</TD>
+                                <TD>Adat 2</TD>
+                            </TR>
+                        </TABLE>
+                    </DIV>
+                </P>
+
+                <P>
+                    Ahogy arról a HTML könyvben szó volt, HTML-ben a táblázathoz úgy lehet szegélyt adni, hogy attribútumként felvesszük a <SPAN class="codepart">border=1</SPAN> utasítást:
+
+                    <PRE>&lt;table border="1"></PRE>
+                    <BUTTON onclick="window.open('/book/html/sample_007')">Példa</BUTTON>
+                </P>
+                <P>
+                    Ebből gondolhatnánk, hogy ha a szegélyt CSS-ből szeretnénk megadni, akkor kiválasztjuk a <SPAN class="codepart">&lt;table></SPAN> taget, és el van intézve a dolog. De az eredmény mégis más:
+
+                    <PRE>table {border: 1px solid black;}</PRE>
+                    <DIV style="width: 250px; height: 250px; border: 3px solid red; padding: 0.5rem;">
+                        <TABLE style="border: 1px solid black;">
+                            <TR>
+                                <TH>Fejléc 1</TH>
+                                <TH>Fejléc 2</TH>
+                            </TR>
+                            <TR>
+                                <TD>Adat 1</TD>
+                                <TD>Adat 2</TD>
+                            </TR>
+                        </TABLE>
+                    </DIV>
+
+                    És az eredmény mégis más. Mivel csak a <SPAN class="codepart">&lt;table></SPAN> taget választottuk ki, így csak a táblázat köré került szegély. A kívánt eredmény elérése érdekében a táblázat, és a benne levő cellák köré is szegélyt kell rakni:
+
+                    <PRE>
+table {border: 1px solid black;}
+th {border: 1px solid black;}
+td {border: 1px solid black;}</PRE>
+                    <DIV style="width: 250px; height: 250px; border: 3px solid red; padding: 0.5rem;">
+                        <TABLE style="border: 1px solid black; border-collapse: initial; border-spacing: 2px;">
+                            <TR>
+                                <TH style="border: 1px solid black;">Fejléc 1</TH>
+                                <TH style="border: 1px solid black;">Fejléc 2</TH>
+                            </TR>
+                            <TR>
+                                <TD style="border: 1px solid black;">Adat 1</TD>
+                                <TD style="border: 1px solid black;">Adat 2</TD>
+                            </TR>
+                        </TABLE>
+                    </DIV>
+                </P>
+            </ARTICLE>
+
+            <ARTICLE>
+                <H2>Szegélytávolság</H2>
+
+                <P>
+                    Adott egy táblázatunk, melyhez sikeresen hozzáadtuk a kívánt szegélyt. Viszont szeretnénk egy kis teret hagyni a táblázat elemei között, de a <SPAN class="codepart">margin</SPAN> tulajdonság cellák esetében nem működik.<BR>
+                    Kétségbeesésre semmi ok, megment minket a <SPAN class="codepart">border-spacing</SPAN> tulajdonság, mely a két cella szegélye közti távolságot adja meg:
+
+                    <PRE>
+table {
+    border: 1px solid black;
+    border-spacing: 10px;
+}
+th {border: 1px solid black;}
+td {border: 1px solid black;}</PRE>
+                    <DIV style="width: 250px; height: 250px; border: 3px solid red; padding: 0.5rem;">
+                        <TABLE style="border: 1px solid black; border-collapse: initial; border-spacing: 10px;">
+                            <TR>
+                                <TH style="border: 1px solid black;">Fejléc 1</TH>
+                                <TH style="border: 1px solid black;">Fejléc 2</TH>
+                            </TR>
+                            <TR>
+                                <TD style="border: 1px solid black;">Adat 1</TD>
+                                <TD style="border: 1px solid black;">Adat 2</TD>
+                            </TR>
+                        </TABLE>
+                    </DIV>
+
+                    <U>Megjegyzés:</U> a <SPAN class="codepart">border-spacing</SPAN> tulajdonsághoz két értéket rendelve az első a vízszintes, a második a függőleges térközt adja meg: <SPAN class="codepart">border-spacing: 10px 20px</SPAN>
+                </P>
+            </ARTICLE>
+
+            <ARTICLE>
+                <H2>Közös szegélyek</H2>
+
+                <P>
+                    Most képzeljük el az ellenkező esetet: El szeretnénk tüntetni a cellák közti távolságot. Erre szolgál a <SPAN class="codeapart">border-collapse</SPAN> tulajdonság, a következő értékekkel:
+                    <UL>
+                        <LI><SPAN class="codepart">separate</SPAN> - cellák között a <SPAN class="codepart">border-spacing</SPAN> tulajdonságban meghatározott távolság lesz</LI>
+                        <LI><SPAN class="codepart">collapse</SPAN> - cellák között nincs távolság, és a szegélyeik közös.</LI>
+                    </UL>
+                </P>
+
+                <P>
+                    Példák:<BR>
+                    Mindkét példában egy 10 pixel széles szegélyt alkalmazunk a táblázatra, és annak elemeire.
+                    <TABLE style="width: 100%; text-align: center;">
+                        <TR>
+                            <TD style="border: 3px ridge black; padding: 0.5rem;">
+                                Ebben a példában a <SPAN class="codepart">border-spacing</SPAN> tulajdonságot állítjuk 0 értékre.
+                                <DIV style="width: 250px; height: 250px; border: 3px solid red; padding: 0.5rem; margin: auto;">
+                                    <TABLE style="border: 10px solid black; border-collapse: initial; border-spacing: 0px;">
+                                        <TR>
+                                            <TH style="border: 10px solid black;">Fejléc 1</TH>
+                                            <TH style="border: 10px solid black;">Fejléc 2</TH>
+                                        </TR>
+                                        <TR>
+                                            <TD style="border: 10px solid black;">Adat 1</TD>
+                                            <TD style="border: 10px solid black;">Adat 2</TD>
+                                        </TR>
+                                    </TABLE>
+                                </DIV>
+                            </TD>
+                            <TD style="border: 3px ridge black; padding: 0.5rem;">
+                                Ebben a példában a <SPAN class="codepart">border-collapse</SPAN> tulajdonságot állítjuk <SPAN class="codeaprt">collapse</SPAN> értékre.
+                                <DIV style="width: 250px; height: 250px; border: 3px solid red; padding: 0.5rem; margin: auto;">
+                                    <TABLE style="border: 10px solid black; border-collapse: collapse;">
+                                        <TR>
+                                            <TH style="border: 10px solid black;">Fejléc 1</TH>
+                                            <TH style="border: 10px solid black;">Fejléc 2</TH>
+                                        </TR>
+                                        <TR>
+                                            <TD style="border: 10px solid black;">Adat 1</TD>
+                                            <TD style="border: 10px solid black;">Adat 2</TD>
+                                        </TR>
+                                    </TABLE>
+                                </DIV>
+                            </TD>
+                        </TR>
+                    </TABLE>
+                    Jól látható, hogy az első példában egy eléggé csúnyácska, 20 pixel vastag szegély választja el egymástól a cellákat, míg a másodikban ez összeolvad, és csak 10 pixel széles lesz.
+                </P>
+            </ARTICLE>
+
+            <ARTICLE>
+                <H2>Tartalom függőleges elhelyezése</H2>
+
+                <P>
+                    Megoldás: <SPAN class="codepart">vertical-align</SPAN> tulajdonság. Értékek:
+                    <UL>
+                        <LI><SPAN class="codepart">top</SPAN> -  felülre (alapértelmezett)</LI>
+                        <LI><SPAN class="codepart">bottom</SPAN> -  alulra</LI>
+                        <LI><SPAN class="codepart">middle</SPAN> -  középre</LI>
+                    </UL>
+                </P>
+
+                <P>
+                    Példa:
+                    <PRE>
+&lt;table>
+    &lt;tr>
+        &lt;th style="height 100px; vertical-align: bottom;">Fejléc&lt;/th>
+    &lt;/tr>
+    &lt;tr>
+        &lt;td style="height: 100px; vertical align: middle;">Adat&lt;/td>
+    &lt;/tr>
+&lt;/table></PRE>
+                    <DIV style="width: 250px; height: 250px; border: 3px solid red; padding: 0.5rem;">
+                        <TABLE style="border: 1px solid black; width: 100%">
+                            <TR>
+                                <TH style="border: 1px solid black; height: 100px; vertical-align: bottom;">Fejléc</TH>
+                            </TR>
+                            <TR>
+                                <TD style="border: 1px solid black; height: 100px; vertical-align: middle;">Adat</TD>
+                            </TR>
+                        </TABLE>
+                    </DIV>
+                </P>
+            </ARTICLE>
         </SECTION>
     </MAIN>
 
