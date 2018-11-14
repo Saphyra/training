@@ -1,3 +1,3 @@
 git pull
 mvn clean package
-(java $* -jar target/bookmarks-1.0-SNAPSHOT.jar &)
+nohup java $* -jar target/training-1.0-SNAPSHOT.jar > /dev/null &
