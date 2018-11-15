@@ -138,7 +138,7 @@ pre{
     color: blue;
 }
 
-.codepart{
+.codepart, code{
     background: rgb(255, 200, 200);
     font-family: monospace;
 }
