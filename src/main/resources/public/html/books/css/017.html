@@ -1,6 +1,6 @@
 <HTML>
 <HEAD>
-    <TITLE>CSS - Kiválasztók 2.1: Másodlagos osztályok - Oktatás</TITLE>
+    <TITLE>CSS - Kiválasztók 2.1: Állapot kiválasztók - Oktatás</TITLE>
     <META charset="UTF-8">
 
     <LINK rel="stylesheet" href="/css/reset.css">
@@ -13,20 +13,105 @@
     <SCRIPT src="/js/common/common_base.js"></SCRIPT>
 
     <STYLE>
+        #test_link:link{
+            color: red;
+        }
+        #test_link:visited{
+            color: yellow;
+        }
+        #test_link:active{
+            font-size: 4rem;
+        }
 
+        #hover_test_hidden{
+            display:none;
+        }
+        #hover_test span:hover + div{
+            display: block;
+        }
     </STYLE>
 </HEAD>
 <BODY>
 <DIV class="cover">
     <HEADER>
-        <H1>CSS - Kiválasztók 2.1: Másodlagos osztályok</H1>
+        <H1>CSS - Kiválasztók 2.1: Állapot kiválasztók</H1>
     </HEADER>
 
     <MAIN>
         <SECTION id='menu_container'></SECTION>
 
         <SECTION id='content_container'>
+            <ARTICLE>
+                <H2>Állapot kiválasztókról általában</H2>
 
+                <P>A HTML tageknek lehetnek bizonyos, felhasználói beavatkozástól függő állapotai. És elég gyakran előfordul, hogy bizonyos szabályokat csak akkor szeretnénk alkalmazni, ha ezek a z állapotok fennállnak.</P>
+                <P>Szintaktika: <SPAN class="codepart">kivalaszto:allapotkivalaszto</SPAN></P>
+            </ARTICLE>
+
+            <ARTICLE>
+                <H2>Linkek állapotai</H2>
+
+                <P>Bizonyára feltűnt neked is, hogy a Google keresőjében (és sok más helyen) azok a linkek, amelyeket már meglátogattál, másképp néznek ki. Ezt a hatás nagyon jó példa az állapot kiválasztók működésére.</P>
+                <P>Amikor egy linkre rákattintanak, akkor annak az állapota megváltozik, és ha van ezt a változást figyelő CSS kód (alapértelmezetten van), akkor az az állapotváltozás következtében érvényre jut, és megváltoztatja a link tulajdonságait (alapértelmezetten a színét).</P>
+
+                <DIV>
+                    Linkek állapotai, és kiválasztói:
+                    <UL>
+                        <LI><SPAN class="codepart">:link</SPAN> - az a link, amelyet még nem látogattak meg</LI>
+                        <LI><SPAN class="codepart">:visited</SPAN> - meglátogatott link</LI>
+                        <LI><SPAN class="codepart">:active</SPAN> - az a link, amelyre éppen rákattintottak (kattintás effekt)</LI>
+                    </UL>
+
+                    Használata: <SPAN class="codepart">a:visited {}</SPAN>
+                </DIV>
+
+                <DIV>
+                    Példa:
+                    <PRE>
+a:link{
+    color: red;
+}
+a:visited{
+    color: yellow;
+}
+a:active{
+    font-size: 4rem;
+}</PRE>
+
+                    <A id="test_link" href="http://www.google.hu" target="_blank">Kattints rám, és figyeld, mi történik!</A>
+                </DIV>
+            </ARTICLE>
+
+            <ARTICLE>
+                <H2>Hover effect</H2>
+
+                <P>A <CODE>:hover</CODE> állapot kiválasztó abban az esetben jut érvényre, hogyha az egér a kiválasztott elem fölé kerül.</P>
+                <DIV>
+                    Ezzel nagyon látványos és hasznos trükköket lehet csinálni:
+
+                    <PRE>
+#hover_test_hidden{
+    display:none;
+}
+#hover_test span:hover + div{
+    display: block;
+}
+
+&lt;DIV id="hover_test">
+    &lt;SPAN style="border: 1px solid red">Húzd fölém az egeret!&lt;/SPAN>
+    &lt;DIV id="hover_test_hidden">Azt hitted, hogy nem vagyok itt, hahaha!&lt;/DIV>
+&lt;/DIV></PRE>
+
+                    <DIV style="width: 250px; height: 250px; border: 3px solid red;">
+                        <DIV id="hover_test">
+                            <SPAN style="border: 1px solid red">Húzd fölém az egeret!</SPAN>
+                            <DIV id="hover_test_hidden">Azt hitted, hogy nem vagyok itt, hahaha!</DIV>
+                        </DIV>
+                    </DIV>
+                </DIV>
+
+                <P><U>Magyarázat:</U> a <CODE>hover_test_hidden</CODE> azonosítójú elemet elrejtjük a képernyőről. Viszont a <CODE>#hover_test span:hover + div</CODE> kiválasztó kombinációval (válaszd ki azt a <CODE>&lt;div></CODE> taget, amely KÖZVETLENÜL egy olyan <CODE>&lt;span></CODE> mögött helyezkedik el, amely <CODE>hover_test</CODE> azonosítújú elemen belül helyezkedik el, és éppen fölötte van az egér) megjelenítjük, de csak abban az esetben, ha a megfelelő elem fölött van az egér.</P>
+            </ARTICLE>
         </SECTION>
     </MAIN>
 
