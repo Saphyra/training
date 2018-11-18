@@ -148,6 +148,7 @@
 
                 <DIV>
                     Példa 2:
+                    <PRE>
 &lt;div style="position: relative;">
     Egyszer volt hol nem volt
     &lt;div style="width: 200px; height: 150px; border: 1px solid black;">
@@ -242,6 +243,26 @@
 
                 <P>Ahogy a példákban látszik, lebegő doboz lehet a tároló bal és jobb oldalán is (vagy épp mindkettő), attól függően, hogy a <SPAN class="codepart">float</SPAN> tulajdonságnak az értékét <SPAN class="codepart">left</SPAN>-re (bal), vagy <SPAN class="codepart">right</SPAN>-ra (jobb) állítjuk.</P>
                 <P>Valamint ahogy a negyedik példa mutatja, több lebegő doboz is követheti egymást, és lebegő doboz elhelyezhető folyó szöveg közben is. Utóbbi esetben a szöveg három oldalról veszi körbe a lebegő dobozunkat.</P>
+            </ARTICLE>
+
+            <ARTICLE>
+                <H2>Átlátszóság</H2>
+
+                <P>Elem átlátszóságát az <CODE>opacity</CODE> tuéajdonsággal állíthatjuk. Ez egy tört számot vár, és minél kisebb ez az érték, annál inkább átlátszó az elem.</P>
+
+                <DIV style="opacity: 1; width: 250px; border: 3px solid red; display: inline-block;">
+                    <IMG src="/img/css/sample_background.jpg" style="width: 100%;">
+                </DIV>
+
+                <DIV style="opacity: 0.5; width: 250px; border: 3px solid red; display: inline-block;">
+                    <IMG src="/img/css/sample_background.jpg" style="width: 100%;">
+                </DIV>
+
+                <DIV style="opacity: 0.2; width: 250px; border: 3px solid red; display: inline-block;">
+                    <IMG src="/img/css/sample_background.jpg" style="width: 100%;">
+                </DIV>
+
+                <P>Az <CODE>opacity</CODE> tulajdonság értéke balról jobbra: 1, 0.5, 0.2</P>
             </ARTICLE>
         </SECTION>
     </MAIN>
