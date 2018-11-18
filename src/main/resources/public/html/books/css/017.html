@@ -112,6 +112,27 @@ a:active{
 
                 <P><U>Magyarázat:</U> a <CODE>hover_test_hidden</CODE> azonosítójú elemet elrejtjük a képernyőről. Viszont a <CODE>#hover_test span:hover + div</CODE> kiválasztó kombinációval (válaszd ki azt a <CODE>&lt;div></CODE> taget, amely KÖZVETLENÜL egy olyan <CODE>&lt;span></CODE> mögött helyezkedik el, amely <CODE>hover_test</CODE> azonosítújú elemen belül helyezkedik el, és éppen fölötte van az egér) megjelenítjük, de csak abban az esetben, ha a megfelelő elem fölött van az egér.</P>
             </ARTICLE>
+
+            <ARTICLE>
+                <H2>Beviteli mezők állapotai</H2>
+
+                <P>A beviteli mezők a bevitt értéktől (is) függően több állapotot vehetnek fel:</P>
+
+                <DIV>
+                    <UL>
+                        <LI><CODE>:invalid</CODE> - ha a beviteli mezőben érvénytelen érték van (például hibás e-mail cím)</LI>
+                        <LI><CODE>:valid</CODE> - ha a beviteli mezőben érvényes érték van</LI>
+                        <LI><CODE>:optional</CODE> - azok a beviteli mezők, melyek kitöltése nem kötelező (a <CODE>required</CODE> attribútuma nincs beállítva)</LI>
+                        <LI><CODE>:required</CODE> - azok a beviteli mezők, melyek kitöltése kötelező (a <CODE>required</CODE> attribútuma be van beállítva)</LI>
+                        <LI><CODE>:out-of-range</CODE> - azok a beviteli mezők, melyek értéke kívül esik a megengedett tartományon (például túl nagy szám, túl hosszú szöveg...)</LI>
+                        <LI><CODE>:in-range</CODE> - azok a beviteli mezők, melyek értéke a megengedet ttartományon belül van</LI>
+                        <LI><CODE>:checked</CODE> - bejelölt jelölőnégyzetek</LI>
+                        <LI><CODE>:disabled</CODE> - azok a beviteli mezők, melyek <CODE>disabled</CODE> tulajdonsága be van állítva.</LI>
+                        <LI><CODE>:enabled</CODE> - azok a beviteli mezők, melyek <CODE>disabled</CODE> tulajdonsága nincs beállítva.</LI>
+                        <LI><CODE>:focus</CODE> - az a beviteli mező, amelyben a kurzor van</LI>
+                    </UL>
+                </DIV>
+            </ARTICLE>
         </SECTION>
     </MAIN>
 
