@@ -141,6 +141,7 @@ pre{
 .codepart, code{
     background: rgb(255, 200, 200);
     font-family: monospace;
+    white-space: nowrap;
 }
 
 /*================INPUT/NAVIGATION ELEMENTS==================*/
