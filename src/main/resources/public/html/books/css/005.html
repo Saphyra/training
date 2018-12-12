@@ -102,6 +102,22 @@
                     <DIV style="width: 250px; height: 250px;background: red; border-radius: 50%;"></DIV>
                 </P>
             </ARTICLE>
+
+            <ARTICLE>
+                <H2>Kép beállítása szegélyként</H2>
+
+                <DIV>
+                    Lehetőségünk van egyéni képet is beállítani szegélyként. Ehhez a következő tulajdonságokat kell használnunk:
+                    <UL>
+                        <LI><CODE>border-image-source: url(kep.jpg)</CODE> - a felhasználni kívánt kép URL-je (Alapértelmezett érték:  <CODE>none</CODE>, tehát nincs</LI>
+
+                    </UL>
+                </DIV>
+
+                <DIV style="width: 250px; height: 250px; border: 10px solid transparent; border-image: url(/img/css/border.png) 10 round;">
+                    Kép a szegélyem!
+                </DIV>
+            </ARTICLE>
         </SECTION>
     </MAIN>
 
