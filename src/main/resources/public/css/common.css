@@ -109,13 +109,20 @@ footer button{
 #content_container article p,
 #content_container article pre,
 #content_container article li,
-#content_container article div{
+#content_container article div,
+#content_container article ul,
+#content_container article ol{
     margin-top: 0.75rem;
     margin-bottom: 0.75rem;
 }
 
 #content_container article p{
     line-height: 1.6;
+}
+
+#content_container article ul,
+#content_container article ol{
+    line-height: 1.2;
 }
 
 pre{

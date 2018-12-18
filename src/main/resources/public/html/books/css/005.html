@@ -110,12 +110,46 @@
                     Lehetőségünk van egyéni képet is beállítani szegélyként. Ehhez a következő tulajdonságokat kell használnunk:
                     <UL>
                         <LI><CODE>border-image-source: url(kep.jpg)</CODE> - a felhasználni kívánt kép URL-je (Alapértelmezett érték:  <CODE>none</CODE>, tehát nincs</LI>
-
+                        <LI><CODE>border-image-slice: ertek</CODE> - a szegélynek használt kép vágási tulajdonságait adja meg. Az érték lehet: szám, %, <CODE>fill</CODE>. Két érték megadása esetén a szemköszti oldalak páronként külön állíthatóak. <CODE>fill</CODE> érték hozzáadása esetén a szegély a tartalom mögé is bekerül.</LI>
+                        <LI><CODE>border-image-width: ertek</CODE> - a szegélynek használt kép szélességét adja meg</LI>
+                        <LI><CODE>border-image-outset: ertek</CODE> - a szegély és szöveg közötti távolságot adja meg</LI>
+                        <LI>
+                            <CODE>border-image-repeat: ertek</CODE> - a kép ismétlődésének módját határozza meg:<BR>
+                            Értéke lehet
+                            <UL>
+                                <LI><CODE>stretch</CODE> - a kép közepét akkorára nyújtja, hogy kitöltse az adott oldalt (alapértelmezett)</LI>
+                                <LI><CODE>repeat</CODE> - a kép középső részét addig ismétli, míg az kitölti az adott oldald</LI>
+                                <LI><CODE>round</CODE> - a kép középső részét úgy ismétli, hogy <B>pontosan </B> kitöltse az adott oldalt</LI>
+                            </UL>
+                        </LI>
                     </UL>
                 </DIV>
 
-                <DIV style="width: 250px; height: 250px; border: 10px solid transparent; border-image: url(/img/css/border.png) 10 round;">
-                    Kép a szegélyem!
+                <DIV>
+                    Példák:
+                    <DIV>
+                        <DIV style="display: inline-block; min-width: 250px; height: 250px; border: 30px solid transparent; border-image-source: url(/img/css/border.png); border-image-slice: 30; border-image-repeat: stretch;">
+                            border: 30px solid transparent;<BR>
+                            border-image-source: url(/img/css/border.png);<BR>
+                            border-image-slice: 30;<BR>
+                            border-image-repeat: <CODE>stretch;</CODE>
+                        </DIV>
+
+                        <DIV style="display: inline-block; min-width: 250px; height: 250px; border: 30px solid transparent; border-image-source: url(/img/css/border.png); border-image-slice: 30; border-image-repeat: repeat;">
+                            border: 30px solid transparent;<BR>
+                            border-image-source: url(/img/css/border.png);<BR>
+                            border-image-slice: 30;<BR>
+                            border-image-repeat: <CODE>repeat</CODE>;
+                        </DIV>
+
+                        <DIV style="display: inline-block; min-width: 250px; height: 250px; border: 30px solid transparent; border-image-source: url(/img/css/border.png); border-image-slice: 30; border-image-repeat: round;">
+                            border: 30px solid transparent;<BR>
+                            border-image-source: url(/img/css/border.png);<BR>
+                            border-image-slice: 30;<BR>
+                            border-image-repeat: <CODE>round</CODE>;
+                        </DIV>
+                    </DIV>
+
                 </DIV>
             </ARTICLE>
         </SECTION>
